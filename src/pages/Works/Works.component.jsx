@@ -9,7 +9,7 @@ import webDesign from "../../images/webDesign.jpg";
 
 function Works() {
   return (
-    <div className="worksPage">
+    <div className="worksPage page">
       <Work engTitle="ANIMATION" twnTitle="動畫" background={animation} />
       <Work
         engTitle="CONTENT MARKET"

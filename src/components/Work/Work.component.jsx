@@ -5,7 +5,7 @@ function Work({ engTitle, twnTitle, background }) {
   let divStyle = {
     backgroundImage: `url(${background})`,
   };
-  console.log(background);
+  // console.log(background);
 
   return (
     <div className="work">

@@ -8,10 +8,11 @@ export class EventHandler {
     // this.boxAppear();
 
     this.menuButtonOn = document.querySelector(".menu-button-on");
-
     this.menuList = document.querySelector(".main-navbar-list");
+    this.menuListItems = document.querySelectorAll(".menu-list-item");
 
     this.menuToggle();
+    this.closeMenu();
   }
 
   menuToggle() {
@@ -22,6 +23,17 @@ export class EventHandler {
       this.menuList.classList.toggle("main-navbar-list-hide");
       this.menuButtonOn.classList.toggle("fa-bars");
       this.menuButtonOn.classList.toggle("fa-times");
+    });
+  }
+
+  closeMenu() {
+    // console.log(this.menuListItems);
+    this.menuListItems.forEach((item) => {
+      item.addEventListener("click", () => {
+        this.menuList.classList.toggle("main-navbar-list-hide");
+        this.menuButtonOn.classList.toggle("fa-bars");
+        this.menuButtonOn.classList.toggle("fa-times");
+      });
     });
   }
 

@@ -7,28 +7,26 @@ import { Switch, Route } from "react-router-dom";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 
 function Content() {
-  // console.log(location);
-
-  const timeout = {
-    enter: 800,
-    exit: 400,
-  };
   return (
-    <TransitionGroup>
-      <CSSTransition
-        timeout={timeout}
-        classNames="pageSlider"
-        mountOnEnter={false}
-        mountOnExit={true}
-      >
-        <div className="main-content">
-          <Switch>
-            <Route exact path="/" component={About} />
-            <Route path="/works" component={Works} />
-          </Switch>
-        </div>
-      </CSSTransition>
-    </TransitionGroup>
+    <Route
+      render={({ location }) => (
+        <TransitionGroup>
+          <CSSTransition
+            key={location.key}
+            timeout={2000}
+            classNames="fade"
+            in={true}
+          >
+            <div className="main-content">
+              <Switch>
+                <Route exact path="/" component={About} />
+                <Route path="/works" component={Works} />
+              </Switch>
+            </div>
+          </CSSTransition>
+        </TransitionGroup>
+      )}
+    ></Route>
   );
 }
 
