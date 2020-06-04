@@ -1,0 +1,11 @@
+@import "../../styles/base/variables.scss";
+@import "../../styles/base/responsiveMixin.scss";
+
+.main-content {
+  // padding-top: 60px;
+  margin-top: 64px;
+  height: calc(100vh - 64px - 50px);
+
+  @include atSmall {
+  }
+}

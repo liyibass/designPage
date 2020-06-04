@@ -1,0 +1,77 @@
+@import "../../styles/base/variables.scss";
+@import "../../styles/base/responsiveMixin.scss";
+
+.aboutPage {
+  margin: 0 auto;
+  width: 70%;
+  max-height: 100%;
+  padding: 2.2rem;
+
+  display: grid;
+  grid-gap: 20px;
+  grid-template-areas:
+    "title title title"
+    " switch content content";
+}
+
+.about-subtitle {
+  grid-area: title;
+  color: $mainDark;
+  height: 30vh;
+  // background: yellow;
+}
+
+.about-switch {
+  grid-area: switch;
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 250px;
+  color: $mainDark;
+
+  i {
+    margin-bottom: 3rem;
+  }
+}
+
+.about-content {
+  grid-area: content;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+
+  &-text {
+    flex: 5;
+    width: 100%;
+    h3 {
+      color: $mainDark;
+      font-size: 2rem;
+      font-weight: 900;
+    }
+
+    h4 {
+      color: $mainDark;
+      font-size: 1.5rem;
+      font-weight: 400;
+    }
+    p {
+      font-size: 1.25rem;
+      color: $mainText;
+    }
+  }
+
+  &-other {
+    min-width: 170px;
+    font-size: 1rem;
+    transform: scale(0.5);
+
+    flex: 1;
+    margin-top: -200px;
+    background-color: red;
+    h1,
+    h2 {
+      color: $navBackground;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+@import "../../styles/base/variables.scss";
+@import "../../styles/base/responsiveMixin.scss";
+
+.worksPage {
+  // background: red;
+  margin: 0 auto;
+  // width: 70%;
+  height: 100%;
+
+  // padding: 2.2rem;
+  // padding-top: 50px;
+  // padding-bottom: 50px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  justify-content: space-between;
+  // justify-content: space-around;
+
+  // display: grid;
+  // grid-gap: 20px;
+  // grid-template-areas:
+  //   "title title title"
+  //   " switch content content";
+}
