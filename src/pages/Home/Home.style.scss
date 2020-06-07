@@ -1,0 +1,55 @@
+@import "../../styles/base/variables.scss";
+@import "../../styles/base/responsiveMixin.scss";
+
+.homePage {
+  height: calc(100vh - 64px - 50px);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: $mainDark;
+}
+
+.home-logo {
+  color: black;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  // background: red;
+  padding-left: 90px;
+  cursor: pointer;
+
+  // transition: color 0.5s ease-in-out;
+
+  &:hover {
+    animation: LogoRotate 0.5s linear;
+  }
+
+  &:checked {
+    color: red;
+  }
+}
+
+.logo-clicked {
+  color: white;
+  // animation: LogoRotate 0.5s linear;
+}
+
+@keyframes LogoRotate {
+  0% {
+    color: black;
+    margin-top: 0px;
+  }
+
+  50% {
+    margin-top: -50px;
+  }
+
+  100% {
+    color: white;
+    margin-top: 0px;
+  }
+}

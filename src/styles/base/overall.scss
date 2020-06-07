@@ -9,18 +9,21 @@ html {
   width: 100%;
 }
 .btn {
-  // background-color: $mainDark;
-  // color: $mainLight;
-  // text-decoration: none;
-  // padding: 0.6rem 1.3rem;
-  // border-radius: 10px;
-  // border: 0;
+  background-color: $navBackground;
+  color: $mainWhite;
+  text-decoration: none;
+  padding: 0.6rem 1.3rem;
+  border-radius: 10px;
+  border: 0;
+  font-size: 1.4rem;
+  font-weight: 700;
+  transition: all 0.5s ease-out;
+  width: 235px;
 
-  // &:hover {
-  //   background-color: $mainLight;
-  //   color: $mainDark;
-  //   transition: all 0.5s ease-out;
-  // }
+  &:hover {
+    background-color: $mainWhite;
+    color: $navBackground;
+  }
 }
 
 a {

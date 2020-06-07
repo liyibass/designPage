@@ -20,7 +20,7 @@ function Navbar() {
       </div>
 
       <div className="main-navbar-list main-navbar-list-hide">
-        <Link className="menu-list-item" to="/">
+        <Link className="menu-list-item" to="/about">
           <Title engTitle="About" twnTitle="關於我們" />
         </Link>
 
@@ -32,7 +32,7 @@ function Navbar() {
           <Title engTitle="Team" twnTitle="團隊介紹" />
         </Link>
 
-        <Link className="menu-list-item" to="/">
+        <Link className="menu-list-item" to="/contact">
           <Title engTitle="Contact" twnTitle="一起合作吧" />
         </Link>
       </div>
