@@ -1,10 +1,24 @@
 @import "../../styles/base/variables.scss";
 @import "../../styles/base/responsiveMixin.scss";
 
+.worksMenu {
+  position: fixed;
+  z-index: 10;
+  color: $mainDark;
+
+  left: 30px;
+  bottom: 90px;
+  transition: transform 0.3s ease-in;
+
+  &:hover {
+    transform: rotate(180deg);
+  }
+}
+
 .worksPage {
   margin: 0 auto;
   width: 100%;
-  height: 100%;
+  height: calc(100vh - 64px - 50px);
 
   // padding: 2.2rem;
   // padding-top: 50px;
@@ -22,4 +36,23 @@
   // grid-template-areas:
   //   "title title title"
   //   " switch content content";
+}
+
+.itemFade-enter {
+  opacity: 0;
+  transform: scale3d(1, 0, 1);
+}
+.itemFade-enter-active {
+  opacity: 1;
+  transform: scale3d(1, 1, 1);
+  transition: all 500ms ease-in;
+}
+.itemFade-exit {
+  opacity: 1;
+  transform: scale3d(1, 1, 1);
+}
+.itemFade-exit-active {
+  opacity: 0;
+  transform: scale3d(1, 0, 1);
+  transition: all 500ms ease-in;
 }

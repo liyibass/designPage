@@ -1,11 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
+
 import "./Work.style.scss";
 
+import animation from "../../images/animation.jpg";
+import contentMarket from "../../images/contentMarket.jpg";
+import socialContent from "../../images/socialMedia.jpg";
+import webDesign from "../../images/webDesign.jpg";
+
 function Work({ engTitle, twnTitle, background }) {
-  let divStyle = {
+  const divStyle = {
     backgroundImage: `url(${background})`,
+    // backgroundColor: "red",
+    // backgroundImage: "url(../../images/animation.jpg)",
   };
-  // console.log(background);
 
   return (
     <div className="work">

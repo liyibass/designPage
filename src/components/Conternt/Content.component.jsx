@@ -8,25 +8,25 @@ import { CSSTransition, TransitionGroup } from "react-transition-group";
 
 function Content() {
   return (
-    <Route
-      render={({ location }) => (
-        <TransitionGroup>
-          <CSSTransition
-            key={location.key}
-            timeout={2000}
-            classNames="fade"
-            in={true}
-          >
-            <div className="main-content">
+    <div className="main-content">
+      <Route
+        render={({ location }) => (
+          <TransitionGroup>
+            <CSSTransition
+              key={location.key}
+              timeout={1000}
+              classNames="fade"
+              in={true}
+            >
               <Switch>
                 <Route exact path="/" component={About} />
                 <Route path="/works" component={Works} />
               </Switch>
-            </div>
-          </CSSTransition>
-        </TransitionGroup>
-      )}
-    ></Route>
+            </CSSTransition>
+          </TransitionGroup>
+        )}
+      ></Route>
+    </div>
   );
 }
 
