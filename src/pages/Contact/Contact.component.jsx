@@ -28,9 +28,9 @@ function Contact() {
     <div className="contactPage">
       <div className="contact-list">
         <div className="contact-list-subtitle">
-          <h1>CONTACT US</h1>
+          <h2>CONTACT US</h2>
           <h4>123@gmail.com</h4>
-          <h1>FOLLOW US</h1>
+          <h2>FOLLOW US</h2>
         </div>
         <div className="contact-list-followUs">
           <i className="fab fa-facebook fa-6x"></i>

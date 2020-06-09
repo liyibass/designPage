@@ -10,25 +10,45 @@
   display: grid;
   grid-gap: 20px;
   grid-template-areas:
-    "title title title"
-    " switch content content";
+    "title "
+    "switch"
+    "content";
+
+  @include atMedium {
+    grid-template-areas:
+      "title title title"
+      " switch content content";
+  }
 }
 
 .about-subtitle {
   grid-area: title;
   color: $mainDark;
   height: 20vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   // background: yellow;
+
+  @include atMedium {
+    display: block;
+  }
 }
 
 .about-switch {
   grid-area: switch;
   margin-top: 1.5rem;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
+  justify-content: space-evenly;
   min-width: 250px;
   color: $mainDark;
+
+  @include atMedium {
+    flex-direction: column;
+    justify-content: start;
+  }
 
   i {
     margin-bottom: 3rem;
