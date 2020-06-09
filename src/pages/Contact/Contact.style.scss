@@ -4,6 +4,7 @@
 .contactPage {
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 50px;
 
   max-width: 1280px;
   // height: calc(100vh - 64px - 50px);
@@ -74,7 +75,7 @@
     display: flex;
     flex-direction: row;
 
-    margin-bottom: 3.2rem;
+    margin-bottom: 2rem;
 
     // background-color: green;
 
@@ -83,6 +84,7 @@
       width: 25%;
       background: $mainDark;
       border-radius: 10px 0 0 10px;
+      border: none;
 
       color: $mainWhite;
       font-size: 1rem;
@@ -99,6 +101,7 @@
     }
 
     @include atSmall {
+      margin-bottom: 3.2rem;
       label {
         font-size: 1.2rem;
       }
