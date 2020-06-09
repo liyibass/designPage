@@ -70,11 +70,12 @@
       transform: scale(0.6);
 
       @include atSmall {
-        width: 400px;
+        width: 300px;
         transform: scale(1);
       }
 
       @include atMedium {
+        width: 300px;
         padding-right: 3.2rem;
       }
 
