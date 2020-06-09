@@ -12,6 +12,8 @@
   flex-direction: column;
   align-items: center;
 
+  // margin-bottom: 500px;
+
   @include atMedium {
     width: 70%;
     display: grid;

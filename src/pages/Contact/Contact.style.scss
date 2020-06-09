@@ -4,11 +4,12 @@
 .contactPage {
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 50px;
+  padding-bottom: 50px;
 
   max-width: 1280px;
   // height: calc(100vh - 64px - 50px);
-  // height: 100vh;
+  height: 100%;
+  // margin-bottom: 50px;
   // background-color: yellow;
 
   padding: 10vh 1.2em 0;
@@ -112,7 +113,12 @@
   }
 
   .button-container {
+    margin-bottom: 100px;
     display: flex;
     flex-direction: row-reverse;
+    justify-content: center;
+    @include atSmall {
+      justify-content: start;
+    }
   }
 }
