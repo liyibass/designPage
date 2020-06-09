@@ -3,18 +3,19 @@
 
 .aboutPage {
   margin: 0 auto;
-  width: 70%;
+  // width: 100%;
+  // width: 70%;
   max-height: 100%;
   padding: 2.2rem;
-
-  display: grid;
-  grid-gap: 20px;
-  grid-template-areas:
-    "title "
-    "switch"
-    "content";
+  // background: red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   @include atMedium {
+    width: 70%;
+    display: grid;
+    grid-gap: 20px;
     grid-template-areas:
       "title title title"
       " switch content content";
@@ -30,6 +31,9 @@
   align-items: center;
   // background: yellow;
 
+  .Title {
+    text-align: center;
+  }
   @include atMedium {
     display: block;
   }
@@ -41,13 +45,16 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-evenly;
-  min-width: 250px;
+  justify-content: space-between;
+  width: 60vw;
   color: $mainDark;
+  transform: scale(0.6);
 
   @include atMedium {
+    width: 350px;
     flex-direction: column;
     justify-content: start;
+    transform: scale(1);
   }
 
   i {
@@ -66,18 +73,30 @@
     width: 100%;
     h3 {
       color: $mainDark;
-      font-size: 2rem;
+      font-size: 1.5rem;
       font-weight: 900;
     }
 
     h4 {
       color: $mainDark;
-      font-size: 1.5rem;
+      font-size: 1.2rem;
       font-weight: 400;
     }
     p {
-      font-size: 1.25rem;
+      font-size: 1.15rem;
       color: $mainText;
+    }
+
+    @include atSmall {
+      h3 {
+        font-size: 2rem;
+      }
+      h4 {
+        font-size: 1.5rem;
+      }
+      p {
+        font-size: 1.25rem;
+      }
     }
   }
 

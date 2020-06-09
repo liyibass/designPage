@@ -67,9 +67,11 @@
       color: $mainWhite;
       // background: red;
       width: 85%;
+      transform: scale(0.6);
 
       @include atSmall {
         width: 400px;
+        transform: scale(1);
       }
 
       @include atMedium {

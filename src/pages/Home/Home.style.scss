@@ -9,6 +9,7 @@
   align-items: center;
   justify-content: center;
   background-color: $mainDark;
+  overflow: hidden;
 }
 
 .home-logo {
@@ -21,7 +22,11 @@
   // background: red;
   padding-left: 90px;
   cursor: pointer;
+  transform: scale(0.8);
 
+  @include atMedium {
+    transform: scale(1);
+  }
   // transition: color 0.5s ease-in-out;
 
   &:hover {

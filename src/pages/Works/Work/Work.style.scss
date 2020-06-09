@@ -9,13 +9,16 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  margin-bottom: 0px;
+
   .work-title {
-    padding-left: 12rem;
+    // background-color: red;
+    padding-left: 1rem;
     width: 300px;
 
     h3 {
-      font-size: 2rem;
+      font-size: 1.5rem;
       font-weight: 800;
       color: $mainDark;
     }
@@ -25,6 +28,19 @@
     }
     z-index: 2;
     transition: all 0.5s ease-in;
+
+    @include atMedium {
+      padding-left: 12rem;
+      width: 300px;
+
+      h3 {
+        font-size: 2rem;
+      }
+
+      h4 {
+        font-size: 1.2rem;
+      }
+    }
   }
 
   .work-background {
@@ -32,7 +48,7 @@
     height: 100%;
     // background-image: url("../../images/animation.jpg");
     background-size: cover;
-    background-position: center;
+    background-position: right;
     opacity: 0;
     z-index: 2;
 
